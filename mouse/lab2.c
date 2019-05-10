@@ -6,12 +6,10 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 
-// void read_mouse(struct read_mouse *)
 int main(void)
 {
 	/* code */
 	struct mouse_info mouse0;
-	// struct mouse_info mouse0;
 	init_mouse();
 
 	for(;;){
@@ -19,13 +17,6 @@ int main(void)
 
 		printf("position of x, y are: %d %d; left click is %d\n",mouse0.x,mouse0.y,mouse0.button);
 	}
-	// read_mouse(&mouse0);
 
-	// // read_mouse(&mouse0);
-	// // printf("position of x, y are: %d %d; left click is %d\n",mouse0.x,&mouse0->y,&mouse0->button);
- //    // printf("position of x is %d ", mouse0.x);
- //    printf("position of x, y are: %d %d; left click is %d\n",mouse0.x,mouse0.y,mouse0.button);
-        
 	return 0;
-	
 }

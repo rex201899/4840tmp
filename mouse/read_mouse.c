@@ -6,8 +6,6 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 
-
-
 struct libusb_device_handle *mouse;
 uint8_t endpoint_address;
 void init_mouse()
@@ -26,36 +24,20 @@ void init_mouse()
   return 0;
 }
 
-/*
-struct mouse_info {
-  int x, y;
-  int button; 
-};
-*/
-// void read_mouse(struct mouse_info *)
 
 void read_mouse(struct mouse_info *ptr)
 {
-  // struct sockaddr_in serv_addr;
   int px = 320;
   int py = 240;
   int numx, numy;
   int modifierss = 0;
   struct usb_mouse_packet packet;
   int transferred;
-  // char keystate[12];
-
-  /* Open the mouse */
-  // if ( (mouse = openmouse(&endpoint_address)) == NULL ) {
-  //   fprintf(stderr, "Did not find a mouse\n");
-  //   exit(1);
-  // }
     
 
   libusb_interrupt_transfer(mouse, endpoint_address,
           (unsigned char *) &packet, sizeof(packet),
           &transferred, 0);
-  // printf("%d\n", flg1);
 
   if (transferred == sizeof(packet)) {
     if (packet.pos_x > 0x88) {
