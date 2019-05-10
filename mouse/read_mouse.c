@@ -81,9 +81,9 @@ void read_mouse(struct mouse_info *ptr)
       else {py = 240;}
 
       modifierss = packet.modifiers;
-      ptr->x=px
-      ptr->y=py
-      ptr->button=modifierss
+      ptr->x=px;
+      ptr->y=py;
+      ptr->button=modifierss;
       printf("position of x, y are: %d %d; left click is %d\n",px,py,modifierss);
       }
     }
