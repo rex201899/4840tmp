@@ -18,7 +18,7 @@ lab2.tar.gz : $(TARFILES)
 
 lab2.o : lab2.c usbmouse.h read_mouse.h
 usbmouse.o : usbmouse.c usbmouse.h
-read_mouse.o : usbmouse.c usbmouse.h read_mouse.c read_mouse.h
+read_mouse.o : read_mouse.c read_mouse.h usbmouse.h
 
 .PHONY : clean
 clean :
