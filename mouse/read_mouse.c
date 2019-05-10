@@ -46,10 +46,10 @@ void read_mouse(struct mouse_info *ptr)
   // char keystate[12];
 
   /* Open the mouse */
-  if ( (mouse = openmouse(&endpoint_address)) == NULL ) {
-    fprintf(stderr, "Did not find a mouse\n");
-    exit(1);
-  }
+  // if ( (mouse = openmouse(&endpoint_address)) == NULL ) {
+  //   fprintf(stderr, "Did not find a mouse\n");
+  //   exit(1);
+  // }
     
 
   for (;;) 
