@@ -6,6 +6,10 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 
+
+
+struct libusb_device_handle *mouse;
+uint8_t endpoint_address;
 void init_mouse()
 {
   int px = 320;
@@ -19,7 +23,7 @@ void init_mouse()
     exit(1);
   }
   printf("init success! position of x, y are: %d %d; left click is %d\n",px,py,modifierss)
-return 0;
+  return 0;
 }
 
 /*
