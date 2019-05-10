@@ -22,7 +22,7 @@ void init_mouse()
     fprintf(stderr, "Did not find a mouse\n");
     exit(1);
   }
-  printf("init success! position of x, y are: %d %d; left click is %d\n",px,py,modifierss)
+  printf("init success! position of x, y are: %d %d; left click is %d\n",px,py,modifierss);
   return 0;
 }
 
@@ -32,7 +32,7 @@ struct mouse_info {
   int button; 
 };
 */
-void read_mouse(struct mouse_info *)
+// void read_mouse(struct mouse_info *)
 
 void read_mouse(struct mouse_info *ptr)
 {
