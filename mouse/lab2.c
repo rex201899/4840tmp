@@ -5,7 +5,6 @@
 #include <string.h>
 #include <arpa/inet.h>
 #include <unistd.h>
-#include <read_mouse.h>
 
 int main(void)
 {
